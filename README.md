@@ -10,3 +10,5 @@ This repository covers the basics of full-stack development based on what I’m 
 My only goal is to summarize what I’ve learned and reinforce my knowledge while sharing it with others who may find it useful.
 
 If you want to study the full course, you can check it out directly on the official Futureskill website.
+
+I will be updating this repository frequently as I continue learning.
