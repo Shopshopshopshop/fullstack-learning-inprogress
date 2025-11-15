@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+
+<body>
+    <script>
+        // JavaScript Operators Examples
+
+        // parentheses = () 
+        const a = 10;
+        const b = 5;
+        const c = 2;
+        const result = (a + b) * c; // (10 + 5)
+        console.log(result); // 30
+
+        // exponents = **
+        const base = 3;
+        const exponent = 4;
+        const powerResult = base ** exponent; // 3^4
+        console.log(powerResult); // 81
+
+        // multiplication = *
+        const mulResult = 6 * 7;
+        console.log(mulResult); // 42
+
+        // division = /
+        const divResult = 20 / 4;
+        console.log(divResult); // 5
+
+        // addition = +
+        const addResult = 15 + 25;
+        console.log(addResult); // 40
+
+        // subtraction = - 
+        const subResult = 50 - 20;
+        console.log(subResult); // 30
+
+        // modulus = % (remainder of division)
+        const modResult = 10 % 3;
+        console.log(modResult); // 1
+
+        // increment = ++
+        let incValue = 5;
+        incValue++;
+        console.log(incValue); // 6
+
+        // decrement = --
+        let decValue = 5;
+        decValue--;
+        console.log(decValue); // 4
+
+        // assignment = =
+        let assignValue = 10;
+        console.log(assignValue); // 10
+        assignValue += 5; // equivalent to assignValue = assignValue + 5
+        console.log(assignValue); // 15
+        assignValue *= 2; // equivalent to assignValue = assignValue * 2
+        console.log(assignValue); // 30
+        assignValue -= 10; // equivalent to assignValue = assignValue - 10
+        console.log(assignValue); // 20
+        assignValue /= 4; // equivalent to assignValue = assignValue / 4
+        console.log(assignValue); // 5
+        assignValue %= 3; // equivalent to assignValue = assignValue % 3
+        console.log(assignValue); // 2
+
+        // comparison operators
+        const x = 10;
+        const y = '10';
+        console.log(x == y); // true (loose equality)
+        console.log(x === y); // false (strict equality)
+        console.log(x != y); // false (loose inequality)
+        console.log(x !== y); // true (strict inequality)
+        console.log(x > 5); // true
+        console.log(x < 15); // true
+        console.log(x >= 10); // true
+        console.log(x <= 9); // false
+
+        // logical operators
+        const p = true;
+        const q = false;
+        console.log(p && q); // false (AND)
+        console.log(p || q); // true (OR)
+        console.log(!p); // false (NOT)
+        console.log(!q); // true (NOT)
+
+        // Tips I learned from the course about operators
+
+        // when use let to assign variable name like a value it will replace the value
+        let twenty = 20;
+        twenty = twenty + 5;
+        console.log(twenty); // 25
+        // so i recommend to use const as much as possible because const can't be changed
+        // it will help to avoid mistakes in code like this one below
+
+        const thirty = 30;
+        thirty = thirty + 10; // error! const can't be changed
+        console.log(thirty)
+
+        // JavaScript can addition both numbers and strings
+        const num1 = 100;
+        const num2 = 50;
+        const sumNumbers = num1 + num2; // 150
+        console.log(sumNumbers);
+        const str1 = "Hello, ";
+        const str2 = "World!";
+        const concatStrings = str1 + str2; // "Hello, World!"
+        console.log(concatStrings);
+
+        // logical operators can be used to combine multiple conditions
+        true && false // it is false because both sides are not true
+        true || false // it is true because one side is true
+        false || false // it is false because both sides are false
+        !true // it is false
+        !false // it is true
+        // these operators are useful in if statements to control the flow of the program
+
+
+
+    </script>
+</body>
+
+</html>

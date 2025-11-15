@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    <script>
+        // let try to do function in javascript
+        // sawasdee is hello in thai language on course teacher use this word to name the function :D
+        function sawasdee(name) {
+            console.log('Sawasdee ka, ' + name + '!');
+        }
+
+        // call the function
+        sawasdee('Shopshop'); // Output: Sawasdee ka, Shopshop!
+        sawasdee(); // Output: Sawasdee ka, undefined!
+
+        // function with if statement
+        function sayHi(name) {
+            if (name == undefined) {
+                console.log('Hi, there!');
+            } else {
+                console.log(`Hi, ${name}!`);
+            }
+        }
+        sayHi() // Output: Hi, there!
+        sayHi('Shopshop') // Output: Hi, Shopshop!
+
+        // arrow function use => syntax 
+        const greet = (name) => {
+            console.log(`Greetings, ${name}!`);
+        }
+        greet('Shopshop'); // Output: Greetings, Shopshop!
+        // why we need arrow function?
+        // because you never forget to declare function in the variable
+
+        // function with return value
+        /*
+        function hello = (name) => {
+            if (name == undefined) {
+                return 'Hello, there!'; // return mean the function will give this value back to the caller
+            } else {
+                return `Hello, ${name}!`;
+            }
+        }
+        */
+
+        // can use shorter syntax for function with return value
+        const hello = (yourName) => {
+            let suffix = ''; // initialize suffix variable
+
+            if (yourName !== undefined) {
+                suffix = ` welcome, ${yourName}!`; // set suffix if name is provided
+            }
+            return `Hello, ${yourName || 'there'}!${suffix}`; // use name or 'there' if name is undefined
+        }
+
+        const s1 = hello(); // s1 will get the return value from hello() function
+        const s2 = hello('Shopshop'); // s2 will get the return value from hello('Shopshop') function
+
+        console.log(s1, ' + ', s2); // Output: Hello, there!  +  Hello, Shopshop!
+    </script>
+</body>
+
+</html>

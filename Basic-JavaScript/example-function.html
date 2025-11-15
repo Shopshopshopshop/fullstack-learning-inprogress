@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Grading program using if, else-if, and else statements inside a function
+        /*
+            const findGrade = (score) => {
+            if (score < 0 || score > 100) {
+                console.log('working...'); // just to show it is working
+                return `Error: Score must be between 0 and 100.`; // early return to exit the function
+                console.log('Hi there'); // this line will not be executed because of the return above
+            } else if (score >= 90) {
+                console.log('Grade: A');
+            }  else if (score >= 80) {
+                console.log('Grade: B');
+            }  else if (score >= 70) {
+                console.log('Grade: C');
+            }  else if (score >= 60) {
+                console.log('Grade: D');
+            } else {
+                console.log('Grade: F');
+            }
+        }
+        
+    
+        findGrade(105); // Output: Error: Score must be between 0 and 100.
+        findGrade(85); // Output: Grade: B
+        */
+
+        // Improved grading function
+        // return early to avoid unnecessary else-if evaluations 
+        // you can use return in function to exit the function early
+        const findGrade = (score) => {
+            if (score < 0 || score > 100) {
+                return `Error: Score must be between 0 and 100.`; // early return to exit the function
+            }
+
+            if (score >= 90) {
+                return ('Grade: A');
+            }
+
+            if (score >= 80) {
+                return ('Grade: B');
+            }
+
+            if (score >= 70) {
+                return ('Grade: C');
+            }
+
+            if (score >= 60) {
+                return ('Grade: D');
+            }
+            return ('Grade: F');   // Didn't use else because all previous conditions are already checked
+        }
+        // now code is easy to read and understand
+        const studentA = findGrade(105);
+        const studentB = findGrade(95);
+        const studentC = findGrade(55);
+        console.log(studentA); // Output: Error: Score must be between 0 and 100.
+        console.log(studentB); // Output: Grade: A
+        console.log(studentC); // Output: Grade: F
+
+        // function will help to reuse the code easily and avoid mistakes when you need to change the logic
+        // just change the logic in the function and all calls to the function will get the updated logic
+
+    </script>
+</body>
+
+</html>

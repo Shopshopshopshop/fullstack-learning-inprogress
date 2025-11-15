@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+    <!--sample how to manipulate DOM using JavaScript -->
+    <p id="content">
+        Hello, World!
+    </p>
+    <button id="button">Click me</button>
+    <script>
+        //sample how to manipulate DOM using JavaScript
+        const content = document.querySelector('#content'); //select element with id content
+        content.innerText = 'Hello, DOM!'; //change text inside the element
+
+        // I want to change button color when I click it :D
+        // change button style
+        const button = document.querySelector('#button'); //select button element
+        // button.style.backgroundColor = 'red'; //change button background color
+
+        // add event listener to button
+        const changeColor = () => {
+            button.style.backgroundColor = 'red';
+        }
+
+        button.addEventListener('click', changeColor);
+
+        // use strong.innerText to add bold text with for loop
+        for (let i = 0; i < 5; i++)  {
+            const strong = document.createElement('strong');
+            strong.innerText = ' This text is bold.';
+            content.appendChild(strong); // use appendChild to add element to the end of the parent element
+        }
+
+        // tutor teach me about random color :D
+        // let try it!
+
+        // function to generate random hex value
+        const randomHex = () => {
+            return Math.floor(Math.random() * 256).toString(16);
+        }
+        
+
+        // function to generate random color
+        function randomColor() {
+            // generate random r, g, b values
+            const r = randomHex();
+            const g = randomHex();
+            const b = randomHex();
+
+            const colour = `#${r}${g}${b}`; // combine r, g, b to hex color format
+            return colour;
+        }
+
+        // change all strong text color to blue with forEach and querySelectorAll
+        document.querySelectorAll('strong').forEach((element) => {
+            element.style.backgroundColor = randomColor(); //change background color to random color
+        });
+
+        // change button color to random color when clicked
+        
+        button.addEventListener('click', () => {
+            button.style.backgroundColor = randomColor();
+        });
+        button.addEventListener('mouseover', () => {
+            button.style.color = randomColor(); // change text color when mouse over
+        })
+
+    </script>
+</body>
+
+</html>

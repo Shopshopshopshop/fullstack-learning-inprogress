@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition</title>
+</head>
+
+<body>
+    <script>
+        // if statement example
+        if (true) {
+            console.log('true.');
+        } else {
+            console.log('false.');
+        } // Output: true. Because the condition is true.
+
+        // let try to use variable in if statement
+        const bar = 10;
+        if (bar > 5) {
+            console.log('bar is greater than 5.');
+        } else {
+            console.log('bar is less than or equal to 5.');
+        } // Output: bar is greater than 5.
+
+        // else-if statement example
+        const foo = 100;
+        if (foo > 200) {
+            console.log('foo is greater than 200.');
+        } else if (foo > 50) {
+            console.log('foo is greater than 50 but less than or equal to 200.');
+        } else {
+            console.log('foo is less than or equal to 50.');
+        } // Output: foo is greater than 50 but less than or equal to 200.
+
+
+
+        // Tips about operation you must be careful when you use in if statement
+        // I already had to understand something when
+        'love' === 'answer' //it is false
+        // but if 
+        'love' === 'love' //it is true
+        // because when people who you love doesn't love you back, it means the answer of your love is not true.
+        // hahahaha it is just a joke
+
+        // when you compare variable, you must make sure that the value is what you expect
+        const expectedValue = 42;
+        const userValue = 40 + 2; // this should be 42
+        if (userValue === expectedValue) {
+            console.log('The user value is as expected.');
+        } else {
+            console.log('The user value is NOT as expected.');
+        } // Output: The user value is as expected.
+
+        // and also be careful with type coercion in JavaScript
+        const stringValue = '100';
+        const numberValue = 100;
+        if (stringValue == numberValue) {
+            console.log('The values are equal with type coercion.');
+        } else {
+            console.log('The values are NOT equal even with type coercion.');
+        } // Output: The values are equal with type coercion.
+
+        // when you compare arrays or objects, be careful because they are reference types in JavaScript
+        const array1 = [1, 2, 3];
+        const array2 = [1, 2, 3];
+        if (array1 === array2) {
+            console.log('The arrays are equal.');
+        } else {
+            console.log('The arrays are NOT equal.');
+        } // Output: The arrays are NOT equal. Because they reference different memory locations.
+
+        '2' === 2 // it is false because of type difference because === checks both value and type
+        '2' == 2 // it is true because of type coercion because == checks only value after type coercion
+        // so be careful when you use == because it may lead to unexpected results due to type coercion
+        // i recommend to use === as much as possible to avoid type coercion issues
+
+        // false, null, undefined, 0, NaN, '' (empty string) are falsy values in JavaScript
+        if (null) {
+            console.log('true');
+        } else {
+            console.log('false');
+        } // Output: false because null is falsy value in JavaScript
+
+        !true // it is false
+        !!true // it is true
+        !false // it is true
+        !null // it is true because null is falsy value
+        !undefined // it is true because undefined is falsy value
+        !0 // it is true because 0 is falsy value
+        !42 // it is false because 42 is truthy value
+
+        5 !== 5 // it is false because both value and type are the same
+        5 !== '5' // it is true because type is different
+        5 != '5' // it is false because after type coercion both value are the same
+        // so be careful when you use != because it may lead to unexpected results due to type coercion
+
+
+    </script>
+</body>
+
+</html>

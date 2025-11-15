@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading programming</title>
+</head>
+
+<body>
+    <script>
+        // Grading program using if, else-if, and else statements
+        const score = 85;
+        if (score >= 90) {
+            console.log('Grade: A');
+        } else if (score >= 80) {
+            console.log('Grade: B');
+        } else if (score >= 70) {
+            console.log('Grade: C');
+        } else if (score >= 60) {
+            console.log('Grade: D');
+        } else {
+            console.log('Grade: F');
+        } // Output: Grade: B
+
+        // I will comment out the following code for now because it is just additional examples
+        /*
+        // use or operator to handle invalid score
+        const score = -10;
+        if (score < 0 || score > 100) {
+            console.log('Error: Score must be between 0 and 100.');
+        } else if (score >= 90) {
+            console.log('Grade: A');
+        } else if (score >= 80) {
+            console.log('Grade: B');
+        } else if (score >= 70) {
+            console.log('Grade: C');
+        } else if (score >= 60) {
+            console.log('Grade: D');
+        } else {
+            console.log('Grade: F');
+        } // Output: Error: Score must be between 0 and 100.
+
+        // when you don't use else-if and else
+        const score = -10
+        if (score < 0 || score > 100) {
+            console.log('Error: Score must be between 0 and 100.');
+        }  if (score >= 90) {
+            console.log('Grade: A');
+        }  if (score >= 80) {
+            console.log('Grade: B');
+        }  if (score >= 70) {
+            console.log('Grade: C');
+        }  if (score >= 60) {
+            console.log('Grade: D');
+        } else {
+            console.log('Grade: F');
+        } // Output: Error: Score must be between 0 and 100. Grade: F
+        // because all if statements are evaluated independently 
+
+        // can print with variable
+        console.log('Your score is ' + score);
+        // or using template literals
+        console.log(`Your score is ${score}`);
+        */
+    </script>
+</body>
+
+</html>

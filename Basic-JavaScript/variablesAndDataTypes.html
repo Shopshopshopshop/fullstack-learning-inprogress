@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VariablesAndDataTypes</title>
+</head>
+
+<body>
+    <!--
+        I try to print "Hello, world!" it basiclly who we are in programming hahahaha
+    -->
+    <div id="hello">world</div>
+    <script>
+        // try to use comments in javascript
+        /* console.log('Hello, world!');
+        console.log('Hello, world!'); */
+        // document.querySelector('#hello').innerText = 'Hello, world!';
+
+        let height = 100; // number on javascript can have decimal point
+        console.log(height);
+        height = 200.5;
+        console.log(height);
+
+        // try to use const
+        const width = 500;
+        console.log(width);
+
+        /*
+        width = 600; // error! const can't be changed
+        width = 600; // error! const can't be changed
+        console.log(width);
+        */
+        // let can be changed, const can't be changed
+
+        // var is old way to declare variable, i don't recommend to use var
+
+        // I recommend to use const as much as possible and use let only when you need to change the value.
+        const newWidth = 600;
+        console.log(newWidth);
+
+        // nuber type in javascript can handle both integer and float
+        const nuberType = 123; // integer
+        const floatType = 123.45; // float
+        console.log(nuberType);
+        console.log(floatType);
+
+        // string type in javascript
+        const greeting = "Hello, JavaScript!";
+        console.log(greeting);
+        const numberAsString = "12345"; // string that looks like a number
+        console.log(numberAsString);
+
+        // boolean type in javascript
+        const isJavaScriptFun = true;
+        const isFishTasty = false;
+        console.log(isJavaScriptFun);
+        console.log(isFishTasty);
+
+        // undefined type in javascript
+        let undefinedVariable;
+        console.log(undefinedVariable); // will print 'undefined'
+        // like a box that is empty and has nothing inside
+
+        // null type in javascript
+        const nullVariable = null;
+        console.log(nullVariable); // will print 'null'
+        // like a box that is intentionally empty
+
+        // example about difference between undefined and null
+        let box1; // box1 is undefined
+        let box2 = null; // box2 is null
+        console.log(box1); // undefined ; zero value it can be assigned later
+        console.log(box2); // null ; zero value that is intentionally empty
+        // later we can put something in box1
+        box1 = 'I have something now!';
+        console.log(box1); // 'I have something now!'
+        // box2 is still null
+        console.log(box2); // null
+
+        // array type in javascript
+        const fruits = ['apple', 'banana', 'cherry'];
+        console.log(fruits);
+
+        // object type in javascript
+        const person = {
+            // key: value pairs
+            name: 'Shop',
+            age: 23,
+            isStudent: false,
+            hasGraduated: true,
+            // object can also contain other objects
+            myLaptop: {
+                brand: 'Apple',
+                model: 'MacBook Air',
+                year: 2023
+            }
+        };
+        console.log(person);
+
+        // can check type of variable using typeof
+        console.log(typeof height); // number
+        console.log(typeof greeting); // string
+        console.log(typeof isJavaScriptFun); // boolean
+        console.log(typeof undefinedVariable); // undefined
+        console.log(typeof nullVariable); // object (this is a known quirk in JavaScript
+        console.log(typeof fruits); // object (arrays are a type of object in JavaScript)
+        console.log(typeof person); // object
+
+        {
+            const inside = 'hi there';
+            console.log(inside);
+        }
+        /*
+        console.log(inside); // error! inside is not defined here
+        */
+    </script>
+</body>
+
+</html>

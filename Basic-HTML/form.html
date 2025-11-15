@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>How to use form</title>
 </head>
 <body>
+    <!--sample how to use form -->
     <form action="">
-        <label>Username:
-            <input id="username" type="text" placeholder="johndoe" />
+        <label>Username: <!--label for username it make input box and label connected -->
+            <input id="username" type="text" placeholder="johndoe" /> <!--placeholder is sample text inside input box -->
         </label>
         <label>
-            Password:
-            <input id="password" type="password" placeholder="********" />
+            Password: 
+            <input id="password" type="password" placeholder="********" /> <!--type password will hide the text -->
         </label>
         <label>
             Email:
-            <input id="email" type="email" placeholder="johndoe@example.com" />
+            <input id="email" type="email" placeholder="johndoe@example.com" /> <!--type email will validate email format -->
         </label>
 
         <h2>Favorites Food</h2>
         <label>
-            <input name="favoritesfood" value="somtum" type="checkbox">
+            <input name="favoritesfood" value="somtum" type="checkbox"> <!--type checkbox allow multiple selection -->
             ส้มตำ
         </label>
         <label>
@@ -35,7 +36,7 @@
 
         <h2>ใช่หรือไม่</h2>
         <label>
-            <input name="yesOrNo" value="yes" type="radio">
+            <input name="yesOrNo" value="yes" type="radio"> <!--type radio allow only one selection -->
             ใช่
         </label>
 
@@ -50,10 +51,11 @@
         </label>
 
         <h2>Province</h2>
-        <select name="province" id="province">
-            <option selected value="bangkok">Bangkok</option>
-            <optgroup label="Central">
-                <option value="pathumthani">Pathum Thani</option>
+        <!--sample how to use select and option -->
+        <select name="province" id="province">  <!-- select is make dropdown list -->
+            <option selected value="bangkok">Bangkok</option> <!-- option is item inside dropdown list -->
+            <optgroup label="Central"> <!-- optgroup is group of options inside dropdown list -->
+                <option value="pathumthani">Pathum Thani</option> 
                 <option value="nonthaburi">Nonthaburi</option>
             </optgroup>
             <optgroup label="North">
@@ -71,10 +73,10 @@
         </label>
 
         <label>
-            <input type="checkbox" required>ยอมรับข้อตกลง
+            <input type="checkbox" required>ยอมรับข้อตกลง <!--required make checkbox must be checked to submit form -->
                 </label>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Submit</button> <!--type submit is button to submit form -->
     </form>
     
 </body>

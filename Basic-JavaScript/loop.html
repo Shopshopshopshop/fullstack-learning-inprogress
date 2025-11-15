@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop (While/For)</title>
+</head>
+
+<body>
+    <script>
+        const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; // array of numbers from 0 to 9
+
+        // how to access each element in the array using for loop
+        arr[0] // access first element
+        arr[1] // access second element
+
+        // use for loop to access each element
+        for (let i = 0; i < arr.length; i++) { // loop from 0 to length of array - 1
+            console.log(`Element at index ${i} is ${arr[i]}`); // Output each element with its index
+        }
+        // output:
+        // Element at index 0 is 0
+        // Element at index 1 is 1
+        // Element at index 2 is 2
+        // Element at index 3 is 3
+        // Element at index 4 is 4
+        // Element at index 5 is 5
+        // Element at index 6 is 6
+        // Element at index 7 is 7
+        // Element at index 8 is 8
+        // Element at index 9 is 9
+
+
+        const arr2 = ['apple', 'banana', 'cherry']; // array of fruits
+
+        for (let i = 0; i < arr2.length; i++) {
+            console.log(arr2[i]); // Output each fruit
+        }
+        // arr2.length = 3
+        // i = 0; 0 < 3? no -> arr2[0] = 'apple'
+        // i = 1; 1 < 3? no -> arr2[1] = 'banana'
+        // i = 2; 2 < 3? no -> arr2[2] = 'cherry'
+        // i = 3; 3 < 3? yes -> stop loop
+
+        // while loop example
+        let i = 0;
+        while (i < arr2.length) {
+            console.log(arr2[i]); // Output each fruit
+            i++; // short hand for i = i + 1
+        }
+        // output:
+        // apple
+        // banana
+        // cherry
+
+        // for
+        for (const item of arr2) {
+            console.log(item);
+
+        } // advantage of for...of is you don't need to manage the index variable and easier to code readibility
+        // but you can't find % 2 === 0 type of condition like for loop 
+        // i will show you example
+
+        for (const item of arr) {
+            console.log(item);
+        } // output 0 to 9 can't do % 2 === 0 condition
+        // because you don't have index variable here
+        // so if you want to do that you must use for loop like this
+        for (let i = 0; i < arr.length; i++) {
+            if (i % 2 === 0) {
+                console.log(`Even number: ${arr[i]}`);
+            } else {
+                console.log(`Odd number: ${arr[i]}`);
+            }
+        }
+
+        // by the way i recommend to use for...of when you just want to access each element in the array because it is easier to read and write
+
+
+        // for each is another way to access each element in the array
+        const print = ((element, index) => {
+            if (index % 2 !== 0) return;
+
+            console.log(element);
+
+        });
+
+        arr.forEach(print); // output 0 to 9 but only odd number
+
+        // can use arrow function like this
+
+        arr.forEach((element, index) => {
+            if (index % 2 === 0) {
+                console.log(element);
+            }
+        });
+        // output 0 to 9 but only even number
+    </script>
+</body>
+
+</html>
